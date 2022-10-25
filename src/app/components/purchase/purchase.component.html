@@ -1,0 +1,19 @@
+<div class="moncontainer">
+    <div class="enfant2">
+    <p>
+        Produit: {{product.name}}<br>
+        Description: {{product.description}}<br>
+        Prix: {{product.price}} €/kilogramme<br>
+        Stock: {{product.quantity}} kilogramme(s)
+    </p>
+    <form (ngSubmit)="AddPurchase(purchase)">
+        <p>Quelle quantité souhaitez-vous réserver?</p>
+        <input [(ngModel)]="purchase.quantity" type="range" min="0"  max="{{product.quantity}}" [ngModelOptions]="{standalone: true}" class="form-range" step="0.25">
+        <p>Quantité sélectionnée: {{purchase.quantity}} kilogramme(s)</p>
+        <p>Prix: {{ (purchase.quantity * product.price) | currency:'EUR'}}</p>
+        <button class="btn btn-outline-success" type="submit">Réserver</button>
+    </form>
+    </div>
+</div>
+
+

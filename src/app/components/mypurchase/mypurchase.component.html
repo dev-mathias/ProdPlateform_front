@@ -1,0 +1,25 @@
+<h3>Voici vos différents produits</h3>
+<table  class="table ">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Nom</th>
+            <th>Date</th>
+            <th>Prix/kilo</th>
+            <th>Quantité</th>
+            <th>Prix total</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of purchases">
+            <td>{{item.id}}</td>   
+            <td>{{item.product.name}}</td>   
+            <td>{{item.date}}</td>   
+            <td>{{item.product.price | currency:'EUR'}}/kilo</td>
+            <td>{{item.quantity}} kilogramme(s)</td>
+            <td>{{ (item.quantity*item.product.price) | currency:'EUR'}} </td>
+        </tr>
+    </tbody>
+    <tfoot></tfoot>
+</table>

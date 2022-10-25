@@ -1,0 +1,42 @@
+.moncontainer{
+    display: flex;
+    justify-content: center;
+   
+    padding-left:10px;
+}
+.enfant1{
+    width: 25%;
+}
+.enfant2{
+    width: 50%;
+    border-radius: 10px;
+    border:5px solid #52BE80;
+    padding: 20px;
+    margin: 20px 10px;
+}
+.enfant3{
+    width: 25%;
+}
+.container2{
+    display: flex;
+    flex-direction: row;
+
+}
+.enfant4{
+    width: 50%;
+    text-align: center;
+    padding:40px;
+    border-radius: 20px;
+}
+.enfant5{
+    width: 50%;
+    text-align: center;
+    padding:40px;
+    border-radius: 20px;
+}
+.enfant4:hover{
+    background-color: #52BE80;  
+}
+.enfant5:hover{
+    background-color: #52BE80; 
+}

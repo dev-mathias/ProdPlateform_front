@@ -1,0 +1,53 @@
+.grandcontainer{
+    display: flex;
+    flex-direction: row;
+    height: 70vh;
+}
+
+.map-container {
+    position: sticky;
+    top: 0;
+    right: 0;
+    height: 80vh;
+    width:50%
+}
+  
+  .map-frame {
+    border: 2px solid black;
+    height: 100%;
+    margin-right: 10px;
+    border-radius: 10px;
+   
+  }
+  
+  #map {
+    height: 100%;
+  }
+//   .card{
+//     height: 50%;
+//   }
+img{
+    height: 126px;
+    width:126px;
+}
+  .container{
+    overflow-y: scroll;
+    margin-right: 20px;
+  }
+.petitcontainer{
+    display: flex;
+    flex-direction: row;
+}
+
+.description{
+    overflow-y:auto;
+    // height:100px;
+    font-weight: 400;
+}
+.card{
+  height:auto;
+}
+.titleproducercard{
+  margin-left: 50px;
+}
+

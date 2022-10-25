@@ -1,0 +1,19 @@
+.moncontainer{
+    display: flex;
+    justify-content: center;
+   
+    padding-left:10px;
+}
+.enfant1{
+    width: 25%;
+}
+.enfant2{
+    width: 50%;
+    border-radius: 10px;
+    border:5px solid #52BE80;
+    padding: 20px;
+    margin: 20px 10px;
+}
+.enfant3{
+    width: 25%;
+}

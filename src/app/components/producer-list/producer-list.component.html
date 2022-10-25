@@ -1,0 +1,36 @@
+<div class="album py-5 bg-light">
+    <div class="grandcontainer">
+        <div class="container">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" >
+            <div class="col" *ngFor="let item of producers" >
+              <div class="card" (click)="openProducerMarker(item)"> 
+                <div class="card-body" >
+                  <div class="petitcontainer">
+                      <img  src="assets/icone/agriculteur.png" class="card-img-top">
+                      <div class="titleproducercard">
+                        <h5 class="card-title">
+                            {{item.lastname|uppercase}}</h5>
+                        <p class="card-subtitle"></p>
+                      </div>
+                    </div>
+                    <p>{{item.email}}</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                         <button type="button" class="btn btn-outline-success"  routerLink="/ProductbyProducer/{{item.id}}">Voir ses produits</button>
+                         <small class="text-muted">
+                            {{item.address.rue}} {{item.address.numero}}, {{item.address.codePostal}} {{item.address.ville}}
+                        </small> 
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="map-container">
+            <div class="map-frame">
+                <div id="map">
+                </div>
+              </div>
+        </div>
+    </div>   
+  </div>
+ 

@@ -1,0 +1,26 @@
+<h3>Voici vos différents produits</h3>
+<table  class="table ">
+    <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Description</th>
+            <th>Prix</th>
+            <th>Quantité</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of products">
+            <td>{{item.name}}</td>   
+            <td>{{item.description}}</td>   
+            <td>{{item.price| currency:'EUR'}}/kilo</td>   
+            <td>{{item.quantity}} kilogramme(s)</td>
+            <td><input type="image" src="assets/icone/crayon.png" routerLink="/UpdateProduct/{{item.id}}"></td>
+            <td><input type="image" src="assets/icone/effacer.png" (click)="Delete(item.id)"></td>
+
+        </tr>
+    </tbody>
+    <tfoot></tfoot>
+    <img src="assets/icone/plus.svg" routerLink="/Addproduct">
+</table>

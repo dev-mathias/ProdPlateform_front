@@ -1,0 +1,35 @@
+<br>
+<h3>Connexion</h3>
+<div class="moncontainer">
+    <div class="enfant1">
+
+    </div>
+    <div class="enfant2">
+        <form class="row g-3" [formGroup]="fg" (ngSubmit)="Login(loginForm)">
+            <p>Merci de renseigner les champs nécessaires à votre connexion </p>
+            <div class="col-auto">
+              <label for="staticEmail2" >Email</label>
+              <input type="text" [(ngModel)]="loginForm.email" class="form-control" id="staticEmail2" 
+                formControlName="email" placeholder="Email">
+            </div>
+            <div class="col-auto">
+              <label for="inputPassword2" >Password</label>
+              <input type="password" [(ngModel)]="loginForm.password" class="form-control" 
+                formControlName="password" id="inputPassword2" placeholder="Password" >
+            </div>
+            <div>
+              <button type="submit" class="btn btn-outline-success mb-3">Login</button>
+            </div>  
+        </form>
+        <br> 
+        <p>
+            Si vous n'êtes pas encore inscrit, vous pouvez le faire en cliquant sur ce bouton
+            <button class="btn btn-outline-success btn-sm" routerLink="/Choix">S'enregistrer</button>
+        </p>
+    </div>
+    <div class="enfant3">
+
+    </div>
+</div>
+
+

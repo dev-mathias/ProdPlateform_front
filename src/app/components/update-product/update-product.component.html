@@ -1,0 +1,58 @@
+<br>
+<h3>Modifier un produit</h3>
+<div class="moncontainer">
+    <div class="enfant1">
+
+    </div>
+    <div class="enfant2">
+        <form  [formGroup]="fg" (ngSubmit)="UpdateProduct(product)">
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Nom du produit</span>
+                <input type="text" [(ngModel)]="product.name" formControlName="nom" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Orange/Fraise/Laitue/...">
+            </div>
+            <div class="error">
+                <p  *ngIf="fg.controls['nom'].invalid && fg.controls['nom'].touched ">
+                    Nom requis
+                </p>
+            </div>
+            <div class="input-group input-group-sm mb-3">
+               <span  class="input-group-text" id="inputGroup-sizing-sm" >Description</span>
+               <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                placeholder="Produit cultivé de manière durable et biologique"
+                formControlName="description" [(ngModel)]="product.description"></textarea>
+            </div>
+            <div class="error">
+                <p  *ngIf="  fg.controls['description'].invalid && fg.controls['description'].touched ">
+                    Description requise
+                </p>
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Quantité (Kg)</span>
+                <input type="number" [(ngModel)]="product.quantity" formControlName="quantite" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="0.5" step="0.25" min="0">
+            </div>
+            <div class="error">
+                <p  *ngIf="  fg.controls['quantite'].invalid && fg.controls['quantite'].touched ">
+                    Quantité requise
+                </p>
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Prix(€) par kilogramme </span>
+                <input type="number" [(ngModel)]="product.price" formControlName="prix" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="5" step="0.1" min="0">
+            </div>
+            <div class="error">
+                <p  *ngIf="  fg.controls['prix'].invalid && fg.controls['prix'].touched ">
+                    Prix requis 
+                </p>
+            </div>
+            <div>
+                <button class="btn btn-primary btn-lg" type="submit">Modifier</button>
+            </div>
+        </form>
+    </div>
+    <div class="enfant3">
+
+    </div>
+</div>
+
+
+

@@ -1,0 +1,85 @@
+<br>
+<h3>Enregistrement</h3>
+<div class="moncontainer">
+    <div class="enfant1">
+
+    </div>
+    <div class="enfant2">
+        <form [formGroup]="fg" (ngSubmit)="AddProducer(producer)">
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Nom</span>
+                <input type="text"  formControlName="nom" [(ngModel)]="producer.lastname" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"> 
+            </div>
+            <div class="error">
+                <p  *ngIf="  fg.controls['nom'].invalid && fg.controls['nom'].dirty ">
+                    Nom requis avec 3 caractères minimum
+                </p>
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Email</span>
+                <input type="text" formControlName="email" class="form-control" [(ngModel)]="producer.email" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            </div>
+            <div class="error">
+                <p  *ngIf="  fg.controls['email'].invalid && fg.controls['email'].dirty ">
+                    L'email est invalide
+                </p>
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Mot de passe</span>
+                <input type="password"  formControlName="password" class="form-control" [(ngModel)]="producer.password" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            </div>
+            <div class="error">
+                <p *ngIf="  fg.controls['password'].invalid && fg.controls['password'].dirty ">
+                    Le mot de passe est requis
+                </p>
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Confirmation du mot de passe</span>
+                <input type="password" class="form-control" formControlName="confirm" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            </div>
+            <div class="error">
+                <p  *ngIf="  fg.controls['confirm'].invalid && fg.controls['confirm'].dirty ">
+                    La confirmation du mot de passe est requise
+                </p>
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Adresse</span>
+                <input type="text"  formControlName="rue" class="form-control" [(ngModel)]="producer.rue"  placeholder="Rue">
+                <input type="text"  formControlName="numero" class="form-control" [(ngModel)]="producer.numero" placeholder="Numéro">
+            </div>
+            <div class="error">
+                <p  *ngIf="  fg.controls['rue'].invalid && fg.controls['rue'].touched ">
+                    La rue est requise
+                </p>
+                <p *ngIf="  fg.controls['numero'].invalid && fg.controls['numero'].touched ">
+                    Le numero est requis
+                </p>
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Adresse</span>
+                <input type="text"  formControlName="codepostal" class="form-control" [(ngModel)]="producer.codePostal"  placeholder="Code postal">
+                <input type="text" formControlName="ville" class="form-control" [(ngModel)]="producer.ville" placeholder="Ville" >
+                <input type="text" formControlName="pays" class="form-control" [(ngModel)]="producer.pays" placeholder="Pays" >
+            </div>
+            <div class="error">
+                <p  *ngIf="  fg.controls['codepostal'].invalid && fg.controls['codepostal'].touched ">
+                    Le code postal est requis
+                </p>
+                <p *ngIf="  fg.controls['ville'].invalid && fg.controls['ville'].touched ">
+                    La ville est requis
+                </p>
+                <p *ngIf="  fg.controls['pays'].invalid && fg.controls['pays'].touched ">
+                    Le pays est requis
+                </p>
+            </div>
+            <div class=".d-flex justify-content-center">
+                <button class="btn btn-outline-success " [disabled]="fg.invalid" type="submit">S'enregistrer</button>
+            </div>
+        </form>
+    </div>
+    <div class="enfant3">
+
+    </div>
+</div>
+
+
